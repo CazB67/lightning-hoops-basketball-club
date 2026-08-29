@@ -10,7 +10,7 @@ export default function Header() {
   const [selected, setSelected] = useState("");
 
   return (
-   <header className="fixed top-0 left-0 w-full z-50 bg-black text-yellow-300">
+    <header className="sticky top-0 z-50 w-full bg-black text-yellow-300">
       {/* Row 1: Logo + Title + Hamburger */}
      <div className="flex flex-row items-center justify-between gap-2 z-50 px-2">
 

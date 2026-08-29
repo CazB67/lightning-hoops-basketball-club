@@ -8,9 +8,9 @@ export default function CommitteeMembersPage() {
         {/* Title column */}
         <div className="flex flex-col items-start justify-start">
           <h1 className="text-3xl font-semibold leading-10 tracking-tight">
-            Committe Members
+            Committee Members
           </h1>
-          <p>We are very thankful for our wonderful committee members, whose hard work makes everything at Lightning Hoops possible. As volunteers, they ensure the club runs smoothly and support players and families. Without their commitment, the club wouldn’t survive – they are the heart of our community. We couldn’t do it without them!</p>
+          <p className="text-left">We are very thankful for our wonderful committee members, whose hard work makes everything at Lightning Hoops possible. As volunteers, they ensure the club runs smoothly and support players and families. Without their commitment, the club wouldn’t survive – they are the heart of our community. We couldn’t do it without them!</p>
         </div>
 
         {/* Square Image column */}
