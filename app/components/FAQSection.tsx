@@ -1,5 +1,4 @@
 import FAQCard from "./FAQCard";
-import Image from "next/image";
 
 const faqData = [
   {
@@ -121,12 +120,10 @@ export type FAQSectionType = {
   }[];
 };
 
-
 export default function FAQSection() {
   return (
     <section className="bg-[#F4F4F4] py-16">
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-4">
             <FAQCard section={faqData[0]} />
@@ -140,7 +137,7 @@ export default function FAQSection() {
             <FAQCard section={faqData[5]} />
           </div>
 
-           {/* Right Sidebar */}
+          {/* Right Sidebar */}
           <aside className="space-y-6 lg:col-span-4">
             <div className="rounded-2xl bg-white p-6 shadow-sm">
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#FFD400] text-2xl">

@@ -13,7 +13,9 @@ export default function CoachesPage() {
               The role of a coach is to teach the kids how to play. Training is
               an important part of playing any sport, kids will enjoy playing
               more when they know what they are doing and why they are doing it.
-              </p><p>Parents and spectators will enjoy watching their kids play when
+            </p>
+            <p>
+              Parents and spectators will enjoy watching their kids play when
               they know what is going on too. Parents / Guardians are welcome to
               join in at training sessions when you can and ask questions if you
               have any.
@@ -34,9 +36,14 @@ export default function CoachesPage() {
         </div>
       </div>
       <div className="flex flex-col items-start justify-start gap-4 py-8 px-4">
-       <h1 className="text-3xl font-semibold leading-10 tracking-tight">
-            Coaching Requirements
-          </h1><p>Team Coaches must be at least 13 years of age in the year of the course enrolled and no specific basketball background is required.</p></div>
+        <h1 className="text-3xl font-semibold leading-10 tracking-tight">
+          Coaching Requirements
+        </h1>
+        <p>
+          Team Coaches must be at least 13 years of age in the year of the
+          course enrolled and no specific basketball background is required.
+        </p>
+      </div>
     </div>
   );
 }

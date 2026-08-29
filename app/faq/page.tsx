@@ -1,5 +1,3 @@
-
-
 import Image from "next/image";
 import FAQSection from "../components/FAQSection";
 
@@ -33,7 +31,9 @@ export default function FAQPage() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-white text-black py-8 px-4"><FAQSection/></div>
+      <div className="w-full bg-white text-black py-8 px-4">
+        <FAQSection />
+      </div>
     </div>
   );
 }

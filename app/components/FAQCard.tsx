@@ -5,7 +5,7 @@ import type { FAQSectionType } from "./FAQSection"; // adjust path
 
 export default function FAQCard({ section }: { section: FAQSectionType }) {
   const [open, setOpen] = useState<number | null>(null);
-console.log("section", section)
+  console.log("section", section);
   return (
     <div className="rounded-2xl bg-white p-5 shadow-sm">
       <div className="mb-4 flex items-center gap-3">
@@ -20,7 +20,10 @@ console.log("section", section)
 
       <div className="space-y-2">
         {section.questions.map((item, i) => (
-          <div key={i} className="overflow-hidden rounded-xl border border-gray-200">
+          <div
+            key={i}
+            className="overflow-hidden rounded-xl border border-gray-200"
+          >
             <button
               onClick={() => setOpen(open === i ? null : i)}
               className="flex w-full items-center justify-between px-4 py-3 text-left font-semibold hover:bg-gray-50"
