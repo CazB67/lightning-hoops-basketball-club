@@ -11,7 +11,7 @@ export default function AboutUsPage() {
             <h1 className="text-3xl font-semibold leading-10 tracking-tight">
               About Us
             </h1>
-           <p className="text-left">
+            <p className="text-left">
               Established in 2017 by three local families in Coogee, WA,
               Lightning Hoops has grown into a vibrant basketball community with
               53 teams, ranging from boys’ and girls’ teams in Under 8 to Under
@@ -19,7 +19,7 @@ export default function AboutUsPage() {
               an environment where players of all ages and skill levels can
               thrive.
             </p>
-           <p className="text-left">
+            <p className="text-left">
               Lightning Hoops is proudly affiliated with Cockburn Basketball
               Association and plays its home games at Wally Hagan Stadium in
               Hamilton Hill, Western Australia. While basketball is at the heart
@@ -32,14 +32,16 @@ export default function AboutUsPage() {
           </div>
 
           {/* Square Image column */}
-          <div className="relative w-full aspect-square max-w-sm mx-auto md:mx-0">
-            <Image
-              src="/photos/girldriving.webp"
-              alt="Girl playing basketball"
-              fill
-              className="object-cover rounded-md"
-              priority
-            />
+          <div className="flex justify-center items-center w-full">
+            <div className="relative aspect-square w-full max-w-sm">
+              <Image
+                src="/photos/girldriving.webp"
+                alt="Girl playing basketball"
+                fill
+                className="object-cover rounded-md"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -49,10 +51,9 @@ export default function AboutUsPage() {
           <div className="w-full flex flex-col grid md:grid-cols-4 grid-cols-2 p-4 pt-px gap-4 items-center justify-center">
             {ourValues.map((item) => (
               <div
-  className="w-full h-40 flex flex-col justify-center items-center text-center bg-gray-100 rounded-lg"
-  key={item.label}
->
-
+                className="w-full h-40 flex flex-col justify-center items-center text-center bg-gray-100 rounded-lg"
+                key={item.label}
+              >
                 <div className="flex justify-center align-center p-3">
                   <Image
                     src={item.icon}
@@ -72,7 +73,7 @@ export default function AboutUsPage() {
           <h1 className="text-3xl font-semibold leading-10 tracking-tight">
             A place for every player
           </h1>
-         <p className="text-left">
+          <p className="text-left">
             Whether you’re a seasoned player or just starting out, we ensure
             every individual feels right at home. Our passionate team of
             volunteers works tirelessly to offer guidance, motivation, and

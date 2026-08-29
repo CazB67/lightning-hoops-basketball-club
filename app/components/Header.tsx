@@ -93,6 +93,7 @@ export default function Header() {
   `}
               onClick={() => {
                 setSelected(item.label);
+                setOpen(!open)
               }}
             >
               {item.label}

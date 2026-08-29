@@ -1,11 +1,36 @@
+import Image from "next/image";
+import FAQSection from "../components/FAQSection";
+
 export default function FAQPage() {
   return (
-    <div className="py-8 px-4 w-full flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black gap-6 ">
-      <div className="w-full flex flex-col items-center text-center sm:items-start sm:text-left">
-        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-          Frequently Asked Questions
-        </h1>
+    <div className="w-full ">
+      <div className="w-full bg-black text-white py-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Title column */}
+          <div className="flex flex-col items-start justify-start">
+            <h1 className="text-3xl font-semibold leading-10 tracking-tight">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-left">
+              Everything you need to know about Lightning Hoops.{" "}
+            </p>
+          </div>
+
+          {/* Square Image column */}
+          <div className="flex justify-center items-center w-full">
+            <div className="relative aspect-[3/2] w-full max-w-sm">
+              <Image
+                src="/photos/storm-boys.jpg"
+                alt="Storm boys"
+                fill
+                className="object-cover rounded-md"
+                priority
+              />
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="w-full bg-white text-black py-8 px-4"><FAQSection/></div>
     </div>
   );
 }

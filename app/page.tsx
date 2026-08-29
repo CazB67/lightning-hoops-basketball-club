@@ -1,6 +1,7 @@
 import { clubNumbers } from "@/helpers/clubNumbers";
 import Slideshow from "./components/Slideshow";
 import Image from "next/image";
+import FixturesButton from "./components/FixturesButton";
 
 export default function Home() {
   return (
@@ -8,15 +9,18 @@ export default function Home() {
       <div className="w-full flex flex-col md:flex-row py-8 px-4 bg-black">
         <div className="w-full flex flex-col gap-4 items-center text-center sm:items-start sm:text-left">
           <h1 className="text-3xl font-semibold leading-10 tracking-tight text-white dark:text-zinc-50 pt-px">
-            Welcome to Lightning Hoops Basketball Club
+            Welcome to Lightning Hoops Basketball Club!
           </h1>
           <h2 className="font-semibold text-xl italic text-white">
-            <span className="text-yellow-300">More</span> than <span className="text-yellow-300">just</span> a <span className="text-yellow-300">game!</span>
+            <span className="text-yellow-300">More</span> than{" "}
+            <span className="text-yellow-300">just</span> a{" "}
+            <span className="text-yellow-300">game!</span>
           </h2>
           <p className="text-white">
             Developing confident players, great teammates and a strong community
-            both on and off the court
+            both on and off the court.
           </p>
+         <FixturesButton/>
         </div>
         <Slideshow />
       </div>

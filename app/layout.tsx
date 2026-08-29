@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header"; // import client header
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Lightning Hoops Basketball Club",
@@ -23,8 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${montserrat.variable} h-full antialiased`}
-    >
+      className={`${bebas.variable} ${montserrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Header />
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -34,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
           </main>
         </div>
+        <Footer />
       </body>
     </html>
   );
