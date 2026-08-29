@@ -2,67 +2,70 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { menuItems } from "../helpers/menuItems";
+import { menuItems } from "@/helpers/menuItems";
 import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
-  console.log(selected);
+
   return (
-    <header className="relative flex flex-col w-full bg-black text-yellow-300 font-semibold text-xl gap-2">
+   <header className="fixed top-0 left-0 w-full z-50 bg-black text-yellow-300">
       {/* Row 1: Logo + Title + Hamburger */}
-      <div className="flex flex-row items-center justify-between gap-2 z-50 px-2">
-        <div className="flex flex-row items-center gap-2 p-2">
-          <div className="flex items-center justify-center rounded-full bg-white p-2">
-            <Image
-              className="p-px"
-              src="/logo.png"
-              alt="Next.js logo"
-              width={28}
-              height={28}
-              priority
-            />
-          </div>
+     <div className="flex flex-row items-center justify-between gap-2 z-50 px-2">
 
-          <Link
-            href="/"
-            className="leading-6 tracking-tight dark:text-zinc-50"
-            onClick={() => setSelected("")}
-          >
-            Lightning Hoops Basketball Club
-          </Link>
-        </div>
+  {/* LEFT: Logo + Title */}
+  <div className="flex flex-row items-center gap-2 p-2">
+    <div className="flex items-center justify-center rounded-full">
+      <Image
+        className="p-px"
+        src="/logo.png"
+        alt="Next.js logo"
+        width={40}
+        height={40}
+        priority
+      />
+    </div>
 
-        <button
-          className="hamburger md:hidden relative w-10 h-10 flex items-center justify-center bg-transparent"
-          onClick={() => setOpen(!open)}
-        >
-          {/* Line 1 */}
-          <span
-            className={`
-      absolute w-8 h-0.5 bg-slate-50 transition-all duration-300
-      ${open ? "rotate-45 translate-y-0" : "-translate-y-3"}
-    `}
-          />
+    <Link
+      href="/"
+      className="leading-6 tracking-tight dark:text-zinc-50 font-bold"
+      onClick={() => setSelected("")}
+    >
+      LIGHTNING HOOPS BASKETBALL CLUB
+    </Link>
+  </div>
 
-          {/* Line 2 */}
-          <span
-            className={`
-      absolute w-8 h-0.5 bg-slate-50 transition-all duration-300
-      ${open ? "opacity-0" : "opacity-100"}
-    `}
-          />
+  {/* RIGHT: Social Icons */}
+  <div className="flex gap-2 pr-2">
 
-          {/* Line 3 */}
-          <span
-            className={`
-      absolute w-8 h-0.5 bg-slate-50 transition-all duration-300
-      ${open ? "-rotate-45 translate-y-0" : "translate-y-3"}
-    `}
-          />
-        </button>
-      </div>
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/lightninghoopsbc"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-yellow-300 hover:text-white transition"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        fill="currentColor" className="w-6 h-6">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
+      </svg>
+    </a>
+  </div>
+
+  {/* Hamburger (mobile) */}
+  <button
+    className="hamburger md:hidden relative w-10 h-10 flex items-center justify-center bg-transparent"
+    onClick={() => setOpen(!open)}
+  >
+    {/* lines */}
+    <span className={`absolute w-8 h-0.5 bg-slate-50 transition-all duration-300 ${open ? "rotate-45 translate-y-0" : "-translate-y-3"}`} />
+    <span className={`absolute w-8 h-0.5 bg-slate-50 transition-all duration-300 ${open ? "opacity-0" : "opacity-100"}`} />
+    <span className={`absolute w-8 h-0.5 bg-slate-50 transition-all duration-300 ${open ? "-rotate-45 translate-y-0" : "translate-y-3"}`} />
+  </button>
+
+</div>
+
 
       <menu
         className={`

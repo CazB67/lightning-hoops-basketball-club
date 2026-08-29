@@ -27,13 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Header />
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-          <main className="flex flex-1 w-full max-w-6xl flex-col items-center justify-between py-8 px-4 bg-white dark:bg-black sm:items-start">
-            <div className="w-full flex flex-col gap-6 items-center text-center sm:items-start sm:text-left">
-              
-  
-                {children}
-              
+        <div className="pt-[100px] flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+          <main className="pt-px flex flex-1 w-full max-w-8xl flex-col items-center justify-between bg-white dark:bg-black sm:items-start">
+            <div className="w-full flex flex-col gap-6 items-center text-center sm:items-start sm:text-left pt-px">
+              {children}
             </div>
           </main>
         </div>

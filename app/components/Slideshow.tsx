@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
+  "/photos/LHlogo.png",
   "/photos/teamphoto1.webp",
   "/photos/teamphoto2.webp",
-  "/photos/team-photo.jpeg",
+  "/photos/team-photo.jpeg"
 ];
 
 export default function Slideshow() {
@@ -23,7 +24,7 @@ export default function Slideshow() {
   return (
     <div className="flex w-full max-w-3xl flex-col items-center gap-4">
       {/* Slideshow */}
-      <div className="relative w-full aspect-[3/2] overflow-hidden rounded-lg">
+      <div className="relative w-full aspect-[3/2] overflow-hidden rounded-xs">
         {images.map((src, i) => (
           <Image
             key={i}
@@ -40,18 +41,21 @@ export default function Slideshow() {
       </div>
 
       {/* Dots */}
-      <div className="flex gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`
-              w-3 h-3 rounded-full transition-all
-              ${i === index ? "bg-black scale-110" : "bg-gray-400"}
-            `}
-          />
-        ))}
-      </div>
+   <div className="flex gap-2">
+  {images.map((_, i) => (
+    <button
+      key={i}
+      onClick={() => setIndex(i)}
+      className={`
+        h-2 rounded-full transition-all
+        ${i === index ? "w-6 bg-yellow-300" : "w-2 bg-gray-300"}
+      `}
+    />
+  ))}
+</div>
+
+
+
     </div>
   );
 }

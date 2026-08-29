@@ -5,8 +5,8 @@
   --background: #ffffff;
   --foreground: #111111;
 
-  --primary: #ffd400;
-  --primary-dark: #e6be00;
+  --primary: #fde047;       /* Tailwind yellow-300 */
+  --primary-dark: #facc15;  /* Tailwind yellow-400 */
 
   --charcoal: #111111;
   --dark: #1a1a1a;
