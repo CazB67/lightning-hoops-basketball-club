@@ -29,6 +29,7 @@ export default function Slideshow() {
           <Image
             key={i}
             src={src}
+            sizes="(max-width: 1024px) 100vw, 33vw"
             alt="Team Photos"
             fill
             priority

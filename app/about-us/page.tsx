@@ -40,6 +40,7 @@ export default function AboutUsPage() {
                 fill
                 className="object-cover rounded-md"
                 priority
+                sizes="(max-width: 1024px) 100vw, 33vw"
               />
             </div>
           </div>
@@ -58,9 +59,11 @@ export default function AboutUsPage() {
                   <Image
                     src={item.icon}
                     alt={item.label}
-                    width={30}
+                    width={50}
                     height={50}
                     priority
+                    className="w-[30px] h-auto"
+                    style={{ height: "auto" }}
                   />
                 </div>
                 <h2 className="font-bold text-xl">{item.number}</h2>

@@ -23,11 +23,12 @@ export default function CoachesPage() {
           {/* Square Image column */}
           <div className="relative w-full aspect-square max-w-sm mx-auto md:mx-0">
             <Image
-              src="/malvinas-back-side.webp"
+              src="/photos/malvinas-back-side.webp"
               alt="Girl playing basketball"
               fill
               className="object-cover rounded-md"
               priority
+              sizes="(max-width: 1024px) 100vw, 33vw"
             />
           </div>
         </div>

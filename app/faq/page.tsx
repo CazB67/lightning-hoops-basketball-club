@@ -1,3 +1,5 @@
+
+
 import Image from "next/image";
 import FAQSection from "../components/FAQSection";
 
@@ -23,8 +25,9 @@ export default function FAQPage() {
                 src="/photos/storm-boys.jpg"
                 alt="Storm boys"
                 fill
-                className="object-cover rounded-md"
+                className="object-cover rounded-md relative"
                 priority
+                sizes="(max-width: 1024px) 100vw, 33vw"
               />
             </div>
           </div>

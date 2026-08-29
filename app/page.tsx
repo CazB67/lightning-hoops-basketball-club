@@ -20,7 +20,7 @@ export default function Home() {
             Developing confident players, great teammates and a strong community
             both on and off the court.
           </p>
-         <FixturesButton/>
+          <FixturesButton />
         </div>
         <Slideshow />
       </div>
@@ -36,9 +36,11 @@ export default function Home() {
                 <Image
                   src={item.icon}
                   alt={item.label}
-                  width={30}
+                  width={50}
                   height={50}
                   priority
+                  className="w-[30px] h-auto"
+                  style={{ height: "auto" }}
                 />
               </div>
               <h2 className="font-bold text-xl">{item.number}</h2>

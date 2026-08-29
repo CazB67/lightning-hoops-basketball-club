@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import FAQCard from "./FAQCard";
 import Image from "next/image";
 
 const faqData = [
@@ -114,78 +112,35 @@ const faqData = [
   },
 ];
 
-function FAQCard({ section }: { section: (typeof faqData)[0] }) {
-  const [open, setOpen] = useState<number | null>(0);
+export type FAQSectionType = {
+  title: string;
+  icon: string;
+  questions: {
+    q: string;
+    a: string;
+  }[];
+};
 
-  return (
-    <div className="rounded-2xl bg-white p-5 shadow-sm">
-      <div className="mb-4 flex items-center gap-3">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FFD400] text-xl">
-          {section.icon}
-        </div>
-        <h3 className="font-heading text-3xl uppercase text-[#111111]">
-          {section.title}
-        </h3>
-      </div>
-
-      <div className="space-y-2">
-        {section.questions.map((item, i) => (
-          <div
-            key={i}
-            className="overflow-hidden rounded-xl border border-gray-200"
-          >
-            <button
-              onClick={() => setOpen(open === i ? null : i)}
-              className="flex w-full items-center justify-between px-4 py-3 text-left font-semibold hover:bg-gray-50"
-            >
-              <span>{item.q}</span>
-              <span className="text-xl text-[#F5B400]">
-                {open === i ? "−" : "+"}
-              </span>
-            </button>
-
-            {open === i && (
-              <div className="border-t bg-gray-50 px-4 py-3 text-sm leading-6 text-gray-600">
-                {item.a}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function FAQSection() {
   return (
     <section className="bg-[#F4F4F4] py-16">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Search */}
-        <div className="mb-10">
-          <input
-            type="text"
-            placeholder="Search FAQs..."
-            className="w-full rounded-full border border-gray-300 px-6 py-4 outline-none focus:border-[#FFD400]"
-          />
-        </div>
 
-        {/* 3 Column Layout */}
         <div className="grid gap-8 lg:grid-cols-12">
-          {/* Left Column */}
           <div className="space-y-6 lg:col-span-4">
             <FAQCard section={faqData[0]} />
             <FAQCard section={faqData[2]} />
             <FAQCard section={faqData[4]} />
           </div>
 
-          {/* Middle Column */}
           <div className="space-y-6 lg:col-span-4">
             <FAQCard section={faqData[1]} />
             <FAQCard section={faqData[3]} />
             <FAQCard section={faqData[5]} />
           </div>
 
-          {/* Right Sidebar */}
+           {/* Right Sidebar */}
           <aside className="space-y-6 lg:col-span-4">
             <div className="rounded-2xl bg-white p-6 shadow-sm">
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#FFD400] text-2xl">
@@ -218,15 +173,6 @@ export default function FAQSection() {
               <button className="mt-6 w-full rounded-xl bg-[#FFD400] py-3 font-bold text-[#111111] transition hover:bg-[#E6BE00]">
                 Contact Us
               </button>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl shadow-sm">
-              <Image
-                src="/images/team-huddle.jpg"
-                alt="Lightning Hoops Team"
-                className="h-56 w-full object-cover"
-                fill
-              />
             </div>
 
             <div className="rounded-2xl bg-[#F8E8A3] p-6">
