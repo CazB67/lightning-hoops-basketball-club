@@ -1,4 +1,4 @@
-import { clubNumbers } from "./clubNumbers";
+import { clubNumbers } from "./helpers/clubNumbers";
 import Slideshow from "./components/Slideshow";
 import Image from "next/image";
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { menuItems } from "../menuItems";
+import { menuItems } from "../helpers/menuItems";
 import Link from "next/link";
 
 export default function Header() {
