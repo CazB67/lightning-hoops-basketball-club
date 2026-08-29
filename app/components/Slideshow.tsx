@@ -24,7 +24,7 @@ export default function Slideshow() {
   return (
     <div className="flex w-full max-w-3xl flex-col items-center gap-4 py-8 px-4 ">
       {/* Slideshow */}
-      <div className="relative w-full aspect-[3/2] overflow-hidden rounded-xs">
+      <div className="relative w-full aspect-[3/2] overflow-hidden rounded-md">
         {images.map((src, i) => (
           <Image
             key={i}
